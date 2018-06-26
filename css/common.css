@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/*Start ---------- reset ------------ */
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section, summary,
+	time, mark, audio, video {
+			box-sizing: border-box;
+	    margin:0;
+	    padding:0;
+	    border:0;
+	    outline:none;
+	    font-size:100%;
+	    vertical-align:baseline;
+	    background:transparent;
+	}
+
+	body {
+	    line-height:1;
+	}
+
+	:focus {
+		outline: 1;
+	}
+
+	article,aside,canvas,details,figcaption,figure,
+	footer,header,hgroup,menu,nav,section,summary { 
+	    display:block;
+	}
+
+	nav ul {
+	    list-style:none;
+	}
+
+	blockquote, q {
+	    quotes:none;
+	}
+
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+	    content:'';
+	    content:none;
+	}
+
+	a {
+	    margin:0;
+	    padding:0;
+	    border:0;
+	    font-size:100%;
+	    vertical-align:baseline;
+	    background:transparent;
+	}
+
+	ins {
+	    background-color:#ff9;
+	    color:#000;
+	    text-decoration:none;
+	}
+
+	mark {
+	    background-color:#ff9;
+	    color:#000; 
+	    font-style:italic;
+	    font-weight:bold;
+	}
+
+	del {
+	    text-decoration: line-through;
+	}
+
+	abbr[title], dfn[title] {
+	    border-bottom:1px dotted #000;
+	    cursor:help;
+	}
+
+	table {
+	    border-collapse:collapse;
+	    border-spacing:0;
+	}
+
+	hr {
+	    display:block;
+	    height:1px;
+	    border:0;   
+	    border-top:1px solid #cccccc;
+	    margin:1em 0;
+	    padding:0;
+	}
+
+	input, select {vertical-align:middle;}
+/*End ------------ reset ------------ */
+
+
+/*http://mxd.tencent.com/wp-content/uploads/2014/11/rem.html*/
+/*375的设计图 100px = 1rem*/
+/*Start ---------- css media ------------ */
+	@media only screen and (min-width: 801px), only screen and (min-device-width:801px) {
+    html,body {
+      font-size:213.33333333333334px;
+    }
+  }
+  @media only screen and (max-width: 800px), only screen and (max-device-width:800px) {
+    html,body {
+      font-size:213.33333333333334px;
+    }
+  }
+  @media only screen and (max-width: 720px), only screen and (max-device-width:720px) {
+    html,body {
+      font-size:192px;
+   	}
+  }
+  @media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+    html,body {
+      font-size:170.66666666666669px;
+    }
+  }
+  @media only screen and (max-width: 600px), only screen and (max-device-width:600px) {
+    html,body {
+      font-size:160px;
+    }
+  }
+	@media only screen and (max-width: 540px), only screen and (max-device-width:540px) {
+    html,body {
+      font-size:144px;
+	  }
+ 	}
+  @media only screen and (max-width: 480px), only screen and (max-device-width:480px) {
+    html,body {
+      font-size:128px;
+    }
+  }
+  @media only screen and (max-width: 414px), only screen and (max-device-width:414px) {
+    html,body {
+      font-size:110.4px;
+    }
+  }
+  @media only screen and (max-width: 400px), only screen and (max-device-width:400px) {
+    html,body {
+      font-size:106.66666666666667px;
+    }
+  }
+  @media only screen and (max-width: 375px), only screen and (max-device-width:375px) {
+    html,body {
+      font-size:100px;
+    }
+  }
+  @media only screen and (max-width: 360px), only screen and (max-device-width:360px) {
+    html,body {
+      font-size:96px;
+    }
+  }
+  @media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+    html,body {
+      font-size:85.33333333333334px;
+    }
+ 	}
+  @media only screen and (max-width: 240px), only screen and (max-device-width:240px) {
+    html,body {
+      font-size:64px;
+    }
+  }
+/*End ------------ css media ------------ */
+
+.messageBox {
+	position: fixed;
+	width: 60%;
+	top: 20%;
+	left: 20%;
+	text-align: center;
+	z-index: 1999;
+	display: block;
+	min-width: 150px;
+	display: inline-block;
+	font-size: 0.14rem;
+	font-weight: bold;
+	color: #ffffff;
+	background: #000000;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	border-radius: 6px;
+	padding: 0.13rem 0.08rem;
+}

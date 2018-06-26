@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">   
+	<title>测试视屏</title>
+	<meta name="Keywords" content="测试视屏">
+	<meta name="Description" content="测试视屏">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="telephone=no" name="format-detection" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/video-js.css" >
+</head>
+<body>
+	<div class="view">
+		<div class="videoBg">
+			<!-- <video id="myvideo1" width="100%" autoplay="autoplay" src="video/crosswalk.mp4" loop="loop">   -->
+			<video id="myvideo1" width="100%" autoplay="autoplay" src="video/night-traffic.mp4" loop="loop"> 
+				
+		    <!-- <source src="images/video1.mp4" type="video/ogg"/> -->
+		  </video>  
+		</div>
+		<div class="content">
+		  <div class="banner">
+		  	<h1>
+		  		<p>BG Stock</p>
+		  		<p>Stock HTML5 Background Video</p>
+				</h1>
+		  </div>
+		  <div class="box1">
+		  	<p>Wait! Before you buy/download,</p>
+		  	<p> did you know you can access this video and thousands of other design assets by joining Welly for $6/month? No licenses.</p>
+		  </div>
+		  <div class="from">
+		  	<h3>Set Your information</h3>
+		  	<input type="text" name="">
+		  	<input type="tel" name="">
+		  	<button class="btn">Send</button>
+		  </div>
+		  <div class="box2">
+				<p><span class="title">Name：</span>Sailing Boats</p>  
+				<p><span class="title">Price：</span> Free</p>  
+				<p><span class="title">Resolution：</span>720p</p>  
+				<p><span class="title">License：</span>Creative Commons</p>  
+				<p><span class="title">Credit：</span>Coverr.co</p>  
+				<p><span class="title">Price：</span> Free</p>  
+				<p><span class="title">Resolution：</span>720p</p>  
+				<p><span class="title">License：</span>Public Domain </p>  
+				<p><span class="title">Credit：</span>Coverr.co</p> 
+		  </div>
+		  <div class="box3">
+		  	<ul>
+		  		<li class="item">
+		  			tip1: 
+		  		</li>
+		  		<li class="item">
+		  			tip2: 
+		  		</li>
+		  		<li class="item">
+		  			tip3: 
+		  		</li>
+		  		<li class="item">
+		  			tip4: 
+		  		</li>
+		  		<li class="item">
+		  			tip5: 
+		  		</li>
+		  	</ul>
+		  </div>
+		</div>
+	  <!-- <div class="m">
+      <video id="my-video" class="video-js" controls preload="auto"
+		   data-setup="{}">
+        <source src="images/video1.mp4" type="video/mp4">
+        <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser </p>
+      </video>
+  </div> -->
+	<!--   <video preload='auto' id='my-video'  src='images/video1.mp4'  webkit-playsinline='true' playsinline='true'x-webkit-airplay='true' x5-video-player-type='h5' x5-video-player-fullscreen='true'x5-video-ignore-metadata='true'  width='100%' height='100%'><p> 不支持video</p></video>  -->
+	</div>
+	<!-- mWrap end -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		window.statConf = {
+      "guid": "tpl_udf_22294350_kongbaimoban",
+      "siteid": 455222,
+      "pageid": 466856,
+      "ucid": 10269607
+  	}
+	</script>
+	<script type="text/javascript" src="https://isite.baidu.com/static/stat.js"></script>
+	<script type="text/javascript" src="js/helper.js"></script>
+  <script src="js/video.min.js"></script> 
+	<script type="text/javascript">
+		// 固定参数，每个page不一样
+		var statConf = {
+			siteid:455222,
+	    pageid:466856,
+	    merchantid:10269607,
+	    prod:4,
+	    type:1
+		}
+
+		window.onload=function(){
+			console.log(222)
+  	// 	var myPlayer = videojs('my-video');
+			// videojs("my-video").ready(function(){
+			// 	var myPlayer = this;
+			// 	myPlayer.play();
+			// });
+			//进入全屏
+		  function requestFullScreen() {
+		    var de = $('#myvideo1')[0];
+		    if (de.requestFullscreen) {
+	        de.requestFullscreen();
+		    } else if (de.mozRequestFullScreen) {
+	        de.mozRequestFullScreen();
+		    } else if (de.webkitRequestFullScreen) {
+	        de.webkitRequestFullScreen();
+		    }
+		    de.play();
+		  }
+			//退出全屏
+			function exitFullscreen() {
+	      var de = document;
+	      if (de.exitFullscreen) {
+	        de.exitFullscreen();
+	      } else if (de.mozCancelFullScreen) {
+	        de.mozCancelFullScreen();
+	      } else if (de.webkitCancelFullScreen) {
+	        de.webkitCancelFullScreen();
+	      }
+		  }
+			$('.playBtn').on('click',function(){
+				console.log(11)
+				$('#myvideo1')[0].play();
+				// requestFullScreen();
+			});
+			var hasPlay = false;
+			function playVideo(){
+				$('#myvideo1')[0].play();
+				hasPlay = true;
+			}
+			$(document).click(function(){
+				if(!hasPlay){
+					playVideo();
+				}
+			})
+  	}
+	</script>
+</body>
+</html>
